@@ -1,0 +1,599 @@
+{
+    "questions": [
+        {
+            "question": "Что делает тег <!DOCTYPE html>?",
+            "options": ["Задаёт кодировку страницы", "Указывает браузеру, что документ написан на HTML5", "Создаёт заголовок страницы", "Подключает CSS-стили"],
+            "correct": "b",
+            "explanation": "Тег &lt;!DOCTYPE html&gt; указывает, что документ написан на HTML5."
+        },
+        {
+            "question": "Какой тег используется для создания параграфа?",
+            "options": ["&lt;div&gt;", "&lt;p&gt;", "&lt;span&gt;", "&lt;section&gt;"],
+            "correct": "b",
+            "explanation": "Для параграфа используется тег &lt;p&gt;."
+        },
+        {
+            "question": "Какой атрибут в теге &lt;img&gt; задаёт альтернативный текст?",
+            "options": ["src", "alt", "title", "href"],
+            "correct": "b",
+            "explanation": "Атрибут alt задаёт альтернативный текст для изображения."
+        },
+        {
+            "question": "Какой тег создаёт нумерованный список?",
+            "options": ["&lt;ul&gt;", "&lt;ol&gt;", "&lt;li&gt;", "&lt;dl&gt;"],
+            "correct": "b",
+            "explanation": "Нумерованный список создаётся с помощью &lt;ol&gt;."
+        },
+        {
+            "question": "Какой семантический тег используется для навигационного меню?",
+            "options": ["&lt;header&gt;", "&lt;footer&gt;", "&lt;nav&gt;", "&lt;main&gt;"],
+            "correct": "c",
+            "explanation": "Для навигационного меню используется семантический тег &lt;nav&gt;."
+        },
+        {
+            "question": "Как создать ссылку, открывающуюся в новой вкладке?",
+            "options": ["&lt;a href=\"url\" new&gt;Ссылка&lt;/a&gt;", "&lt;a href=\"url\" target=\"_blank\"&gt;Ссылка&lt;/a&gt;", "&lt;a href=\"url\" open=\"new\"&gt;Ссылка&lt;/a&gt;", "&lt;a href=\"url\" rel=\"new\"&gt;Ссылка&lt;/a&gt;"],
+            "correct": "b",
+            "explanation": "Для открытия ссылки в новой вкладке используется &lt;a href=\"url\" target=\"_blank\"&gt;."
+        },
+        {
+            "question": "Какой тег задаёт заголовок страницы в браузере?",
+            "options": ["&lt;meta&gt;", "&lt;title&gt;", "&lt;head&gt;", "&lt;h1&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;title&gt; задаёт заголовок страницы, отображаемый на вкладке браузера."
+        },
+        {
+            "question": "Что делает тег &lt;meta charset=\"UTF-8\"&gt;?",
+            "options": ["Задаёт язык страницы", "Задаёт кодировку страницы", "Подключает JavaScript", "Определяет адаптивность"],
+            "correct": "b",
+            "explanation": "Тег &lt;meta charset=\"UTF-8\"&gt; задаёт кодировку страницы, поддерживающую кириллицу."
+        },
+        {
+            "question": "Какой тег используется для заголовка первого уровня?",
+            "options": ["&lt;h1&gt;", "&lt;h2&gt;", "&lt;header&gt;", "&lt;title&gt;"],
+            "correct": "a",
+            "explanation": "Тег &lt;h1&gt; создаёт заголовок первого уровня, наиболее важный на странице."
+        },
+        {
+            "question": "Какой тег создаёт горизонтальную линию?",
+            "options": ["&lt;br&gt;", "&lt;hr&gt;", "&lt;line&gt;", "&lt;divider&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;hr&gt; создаёт горизонтальную линию (разделитель)."
+        },
+        {
+            "question": "Какой тег используется для жирного текста?",
+            "options": ["&lt;em&gt;", "&lt;strong&gt;", "&lt;i&gt;", "&lt;u&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;strong&gt; выделяет текст жирным шрифтом и подчёркивает его важность."
+        },
+        {
+            "question": "Какой тег создаёт ненумерованный список?",
+            "options": ["&lt;ol&gt;", "&lt;ul&gt;", "&lt;li&gt;", "&lt;dl&gt;"],
+            "correct": "b",
+            "explanation": "Ненумерованный список создаётся с помощью &lt;ul&gt;."
+        },
+        {
+            "question": "Какой тег используется для элемента списка?",
+            "options": ["&lt;ul&gt;", "&lt;ol&gt;", "&lt;li&gt;", "&lt;list&gt;"],
+            "correct": "c",
+            "explanation": "Тег &lt;li&gt; используется для элементов списка внутри &lt;ul&gt; или &lt;ol&gt;."
+        },
+        {
+            "question": "Какой тег задаёт метаданные страницы?",
+            "options": ["&lt;body&gt;", "&lt;head&gt;", "&lt;meta&gt;", "&lt;title&gt;"],
+            "correct": "c",
+            "explanation": "Тег &lt;meta&gt; задаёт метаданные, такие как кодировка или описание."
+        },
+        {
+            "question": "Какой атрибут задаёт уникальный идентификатор элемента?",
+            "options": ["class", "id", "name", "type"],
+            "correct": "b",
+            "explanation": "Атрибут id задаёт уникальный идентификатор для элемента."
+        },
+        {
+            "question": "Какой тег используется для создания таблицы?",
+            "options": ["&lt;table&gt;", "&lt;tr&gt;", "&lt;td&gt;", "&lt;th&gt;"],
+            "correct": "a",
+            "explanation": "Тег &lt;table&gt; создаёт таблицу."
+        },
+        {
+            "question": "Какой тег задаёт строку таблицы?",
+            "options": ["&lt;td&gt;", "&lt;th&gt;", "&lt;tr&gt;", "&lt;table&gt;"],
+            "correct": "c",
+            "explanation": "Тег &lt;tr&gt; задаёт строку таблицы."
+        },
+        {
+            "question": "Какой тег задаёт заголовок столбца в таблице?",
+            "options": ["&lt;td&gt;", "&lt;th&gt;", "&lt;tr&gt;", "&lt;table&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;th&gt; задаёт заголовок столбца в таблице."
+        },
+        {
+            "question": "Какой тег создаёт форму для ввода данных?",
+            "options": ["&lt;input&gt;", "&lt;form&gt;", "&lt;label&gt;", "&lt;button&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;form&gt; создаёт форму для ввода данных."
+        },
+        {
+            "question": "Какой атрибут в теге &lt;form&gt; задаёт метод отправки данных?",
+            "options": ["action", "method", "type", "href"],
+            "correct": "b",
+            "explanation": "Атрибут method задаёт метод отправки данных (например, GET или POST)."
+        },
+        {
+            "question": "Какой тег создаёт поле ввода в форме?",
+            "options": ["&lt;input&gt;", "&lt;form&gt;", "&lt;label&gt;", "&lt;button&gt;"],
+            "correct": "a",
+            "explanation": "Тег &lt;input&gt; создаёт поле ввода в форме."
+        },
+        {
+            "question": "Какой атрибут в теге &lt;input&gt; задаёт тип поля?",
+            "options": ["name", "id", "type", "value"],
+            "correct": "c",
+            "explanation": "Атрибут type задаёт тип поля ввода, например, text или password."
+        },
+        {
+            "question": "Какой тег создаёт подпись для поля ввода?",
+            "options": ["&lt;input&gt;", "&lt;form&gt;", "&lt;label&gt;", "&lt;button&gt;"],
+            "correct": "c",
+            "explanation": "Тег &lt;label&gt; создаёт подпись для поля ввода."
+        },
+        {
+            "question": "Какой тег используется для создания кнопки?",
+            "options": ["&lt;input&gt;", "&lt;form&gt;", "&lt;label&gt;", "&lt;button&gt;"],
+            "correct": "d",
+            "explanation": "Тег &lt;button&gt; создаёт кнопку."
+        },
+        {
+            "question": "Какой семантический тег используется для основного контента?",
+            "options": ["&lt;header&gt;", "&lt;footer&gt;", "&lt;nav&gt;", "&lt;main&gt;"],
+            "correct": "d",
+            "explanation": "Тег &lt;main&gt; используется для основного контента страницы."
+        },
+        {
+            "question": "Какой семантический тег используется для подвала сайта?",
+            "options": ["&lt;header&gt;", "&lt;footer&gt;", "&lt;nav&gt;", "&lt;main&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;footer&gt; используется для подвала сайта."
+        },
+        {
+            "question": "Какой тег используется для переноса строки?",
+            "options": ["&lt;br&gt;", "&lt;hr&gt;", "&lt;line&gt;", "&lt;nl&gt;"],
+            "correct": "a",
+            "explanation": "Тег &lt;br&gt; создаёт перенос строки."
+        },
+        {
+            "question": "Какой тег используется для курсивного текста?",
+            "options": ["&lt;strong&gt;", "&lt;em&gt;", "&lt;b&gt;", "&lt;u&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;em&gt; выделяет текст курсивом и подчёркивает акцент."
+        },
+        {
+            "question": "Какой атрибут в теге &lt;a&gt; задаёт адрес ссылки?",
+            "options": ["src", "href", "alt", "title"],
+            "correct": "b",
+            "explanation": "Атрибут href задаёт адрес ссылки в теге &lt;a&gt;."
+        },
+        {
+            "question": "Какой тег является корневым элементом HTML-документа?",
+            "options": ["&lt;body&gt;", "&lt;head&gt;", "&lt;html&gt;", "&lt;title&gt;"],
+            "correct": "c",
+            "explanation": "Тег &lt;html&gt; является корневым элементом HTML-документа."
+        },
+        {
+            "question": "Какой тег используется для создания статьи?",
+            "options": ["&lt;section&gt;", "&lt;article&gt;", "&lt;aside&gt;", "&lt;div&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;article&gt; используется для независимого контента, например, статьи."
+        },
+        {
+            "question": "Какой тег используется для боковой панели?",
+            "options": ["&lt;section&gt;", "&lt;article&gt;", "&lt;aside&gt;", "&lt;div&gt;"],
+            "correct": "c",
+            "explanation": "Тег &lt;aside&gt; используется для боковой панели или дополнительного контента."
+        },
+        {
+            "question": "Какой атрибут в теге &lt;input&gt; задаёт начальное значение?",
+            "options": ["name", "id", "type", "value"],
+            "correct": "d",
+            "explanation": "Атрибут value задаёт начальное значение поля ввода."
+        },
+        {
+            "question": "Какой тег создаёт выпадающий список?",
+            "options": ["&lt;input&gt;", "&lt;select&gt;", "&lt;option&gt;", "&lt;dropdown&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;select&gt; создаёт выпадающий список."
+        },
+        {
+            "question": "Какой тег задаёт элемент выпадающего списка?",
+            "options": ["&lt;input&gt;", "&lt;select&gt;", "&lt;option&gt;", "&lt;dropdown&gt;"],
+            "correct": "c",
+            "explanation": "Тег &lt;option&gt; задаёт элемент выпадающего списка внутри &lt;select&gt;."
+        },
+        {
+            "question": "Какой тег создаёт многострочное текстовое поле?",
+            "options": ["&lt;input&gt;", "&lt;textarea&gt;", "&lt;select&gt;", "&lt;form&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;textarea&gt; создаёт многострочное текстовое поле."
+        },
+        {
+            "question": "Какой атрибут в теге &lt;form&gt; задаёт URL для отправки данных?",
+            "options": ["action", "method", "type", "href"],
+            "correct": "a",
+            "explanation": "Атрибут action задаёт URL, куда отправляются данные формы."
+        },
+        {
+            "question": "Какой тег используется для группировки элементов формы?",
+            "options": ["&lt;form&gt;", "&lt;fieldset&gt;", "&lt;legend&gt;", "&lt;input&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;fieldset&gt; группирует элементы формы."
+        },
+        {
+            "question": "Какой тег задаёт заголовок для &lt;fieldset&gt;?",
+            "options": ["&lt;form&gt;", "&lt;fieldset&gt;", "&lt;legend&gt;", "&lt;input&gt;"],
+            "correct": "c",
+            "explanation": "Тег &lt;legend&gt; задаёт заголовок для группы &lt;fieldset&gt;."
+        },
+        {
+            "question": "Какой тег используется для выделения текста?",
+            "options": ["&lt;mark&gt;", "&lt;strong&gt;", "&lt;em&gt;", "&lt;b&gt;"],
+            "correct": "a",
+            "explanation": "Тег &lt;mark&gt; используется для выделения текста, например, цветом."
+        },
+        {
+            "question": "Какой тег создаёт встраиваемое изображение?",
+            "options": ["&lt;img&gt;", "&lt;image&gt;", "&lt;picture&gt;", "&lt;src&gt;"],
+            "correct": "a",
+            "explanation": "Тег &lt;img&gt; создаёт встраиваемое изображение."
+        },
+        {
+            "question": "Какой атрибут в теге &lt;img&gt; задаёт путь к изображению?",
+            "options": ["src", "alt", "title", "href"],
+            "correct": "a",
+            "explanation": "Атрибут src задаёт путь к изображению в теге &lt;img&gt;."
+        },
+        {
+            "question": "Какой тег создаёт заголовок второго уровня?",
+            "options": ["&lt;h1&gt;", "&lt;h2&gt;", "&lt;header&gt;", "&lt;title&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;h2&gt; создаёт заголовок второго уровня."
+        },
+        {
+            "question": "Какой тег используется для комментариев в HTML?",
+            "options": ["&lt;!-- --&gt;", "&lt;// //&gt;", "&lt;# #&gt;", "&lt;** **&gt;"],
+            "correct": "a",
+            "explanation": "Комментарии в HTML создаются с помощью &lt;!-- --&gt;."
+        },
+        {
+            "question": "Какой тег задаёт содержимое страницы?",
+            "options": ["&lt;head&gt;", "&lt;body&gt;", "&lt;html&gt;", "&lt;main&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;body&gt; задаёт содержимое страницы."
+        },
+        {
+            "question": "Какой атрибут задаёт язык документа?",
+            "options": ["lang", "charset", "type", "href"],
+            "correct": "a",
+            "explanation": "Атрибут lang задаёт язык документа, например, lang=\"ru\"."
+        },
+        {
+            "question": "Какой тег используется для разделения контента?",
+            "options": ["&lt;div&gt;", "&lt;section&gt;", "&lt;article&gt;", "&lt;aside&gt;"],
+            "correct": "a",
+            "explanation": "Тег &lt;div&gt; используется для разделения контента без семантического значения."
+        },
+        {
+            "question": "Какой тег используется для группировки тематического контента?",
+            "options": ["&lt;div&gt;", "&lt;section&gt;", "&lt;article&gt;", "&lt;aside&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;section&gt; используется для группировки тематического контента."
+        },
+        {
+            "question": "Какой атрибут в теге &lt;input&gt; делает поле обязательным?",
+            "options": ["required", "mandatory", "needed", "must"],
+            "correct": "a",
+            "explanation": "Атрибут required делает поле ввода обязательным."
+        },
+        {
+            "question": "Какой тег используется для встраивания видео?",
+            "options": ["&lt;img&gt;", "&lt;video&gt;", "&lt;media&gt;", "&lt;embed&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;video&gt; используется для встраивания видео."
+        },
+        {
+            "question": "Какой атрибут в теге &lt;video&gt; задаёт источник видео?",
+            "options": ["src", "href", "alt", "title"],
+            "correct": "a",
+            "explanation": "Атрибут src задаёт источник видео в теге &lt;video&gt;."
+        },
+        {
+            "question": "Какой тег используется для встраивания аудио?",
+            "options": ["&lt;audio&gt;", "&lt;sound&gt;", "&lt;media&gt;", "&lt;embed&gt;"],
+            "correct": "a",
+            "explanation": "Тег &lt;audio&gt; используется для встраивания аудио."
+        },
+        {
+            "question": "Какой атрибут в теге &lt;input&gt; задаёт имя поля?",
+            "options": ["id", "name", "type", "value"],
+            "correct": "b",
+            "explanation": "Атрибут name задаёт имя поля для отправки данных формы."
+        },
+        {
+            "question": "Какой тег используется для создания подзаголовка?",
+            "options": ["&lt;h1&gt;", "&lt;h3&gt;", "&lt;header&gt;", "&lt;title&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;h3&gt; создаёт подзаголовок третьего уровня."
+        },
+        {
+            "question": "Какой тег используется для выделения цитаты?",
+            "options": ["&lt;quote&gt;", "&lt;blockquote&gt;", "&lt;cite&gt;", "&lt;q&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;blockquote&gt; используется для выделения длинной цитаты."
+        },
+        {
+            "question": "Какой тег используется для короткой цитаты?",
+            "options": ["&lt;quote&gt;", "&lt;blockquote&gt;", "&lt;cite&gt;", "&lt;q&gt;"],
+            "correct": "d",
+            "explanation": "Тег &lt;q&gt; используется для короткой цитаты."
+        },
+        {
+            "question": "Какой тег задаёт источник цитаты?",
+            "options": ["&lt;quote&gt;", "&lt;blockquote&gt;", "&lt;cite&gt;", "&lt;q&gt;"],
+            "correct": "c",
+            "explanation": "Тег &lt;cite&gt; задаёт источник цитаты."
+        },
+        {
+            "question": "Какой тег используется для выделения кода?",
+            "options": ["&lt;code&gt;", "&lt;pre&gt;", "&lt;kbd&gt;", "&lt;samp&gt;"],
+            "correct": "a",
+            "explanation": "Тег &lt;code&gt; используется для выделения кода."
+        },
+        {
+            "question": "Какой тег сохраняет форматирование текста?",
+            "options": ["&lt;code&gt;", "&lt;pre&gt;", "&lt;kbd&gt;", "&lt;samp&gt;"],
+            "correct": "b",
+            "explanation": "Тег &lt;pre&gt; сохраняет форматирование текста, включая пробелы и переносы."
+        },
+        // CSS Questions (40)
+        {
+            "question": "Какой CSS-селектор выберет элементы с классом \"intro\"?",
+            "options": ["#intro", ".intro", "intro", "[class=\"intro\"]"],
+            "correct": "b",
+            "explanation": "Селектор для класса — это .intro."
+        },
+        {
+            "question": "Какое свойство CSS задаёт цвет фона?",
+            "options": ["color", "background-color", "font-color", "bg-color"],
+            "correct": "b",
+            "explanation": "Цвет фона задаётся свойством background-color."
+        },
+        {
+            "question": "Как подключить внешний CSS-файл к HTML?",
+            "options": ["&lt;style src=\"styles.css\"&gt;&lt;/style&gt;", "&lt;link rel=\"stylesheet\" href=\"styles.css\"&gt;", "&lt;css href=\"styles.css\"&gt;", "&lt;script src=\"styles.css\"&gt;&lt;/script&gt;"],
+            "correct": "b",
+            "explanation": "Внешний CSS подключается через &lt;link rel=\"stylesheet\" href=\"styles.css\"&gt;."
+        },
+        {
+            "question": "Какое свойство CSS задаёт внутренний отступ элемента?",
+            "options": ["margin", "padding", "border", "spacing"],
+            "correct": "b",
+            "explanation": "Внутренний отступ задаётся свойством padding."
+        },
+        {
+            "question": "Какой CSS-селектор выберет элемент с id=\"header\"?",
+            "options": [".header", "#header", "header", "[id=\"header\"]"],
+            "correct": "b",
+            "explanation": "Селектор для id — это #header."
+        },
+        {
+            "question": "Какое свойство CSS задаёт размер шрифта?",
+            "options": ["font-size", "text-size", "size", "font-style"],
+            "correct": "a",
+            "explanation": "Размер шрифта задаётся свойством font-size."
+        },
+        {
+            "question": "Какое свойство CSS выравнивает текст по центру?",
+            "options": ["align", "text-align", "justify", "center"],
+            "correct": "b",
+            "explanation": "Выравнивание текста задаётся свойством text-align."
+        },
+        {
+            "question": "Какое свойство CSS задаёт скругление углов?",
+            "options": ["border", "border-radius", "corner", "round"],
+            "correct": "b",
+            "explanation": "Скругление углов задаётся свойством border-radius."
+        },
+        {
+            "question": "Какое свойство CSS задаёт цвет текста?",
+            "options": ["color", "text-color", "font-color", "background-color"],
+            "correct": "a",
+            "explanation": "Цвет текста задаётся свойством color."
+        },
+        {
+            "question": "Какой селектор CSS применяет стили ко всем элементам?",
+            "options": ["*", ".", "#", "[]"],
+            "correct": "a",
+            "explanation": "Универсальный селектор * применяет стили ко всем элементам."
+        },
+        {
+            "question": "Какое свойство CSS задаёт внешний отступ?",
+            "options": ["padding", "margin", "border", "spacing"],
+            "correct": "b",
+            "explanation": "Внешний отступ задаётся свойством margin."
+        },
+        {
+            "question": "Какое свойство CSS задаёт шрифт текста?",
+            "options": ["font-family", "font-style", "font-weight", "font-size"],
+            "correct": "a",
+            "explanation": "Шрифт текста задаётся свойством font-family."
+        },
+        {
+            "question": "Какое значение свойства text-align выравнивает текст по правому краю?",
+            "options": ["left", "center", "right", "justify"],
+            "correct": "c",
+            "explanation": "Значение right для text-align выравнивает текст по правому краю."
+        },
+        {
+            "question": "Какое свойство CSS задаёт толщину шрифта?",
+            "options": ["font-size", "font-weight", "font-style", "text-weight"],
+            "correct": "b",
+            "explanation": "Толщина шрифта задаётся свойством font-weight."
+        },
+        {
+            "question": "Какой CSS-селектор выберет элементы с атрибутом type=\"text\"?",
+            "options": ["[type=\"text\"]", ".type-text", "#type-text", "type=text"],
+            "correct": "a",
+            "explanation": "Селектор [type=\"text\"] выбирает элементы с атрибутом type=\"text\"."
+        },
+        {
+            "question": "Какое свойство CSS задаёт ширину элемента?",
+            "options": ["width", "height", "size", "length"],
+            "correct": "a",
+            "explanation": "Ширина элемента задаётся свойством width."
+        },
+        {
+            "question": "Какое свойство CSS задаёт высоту элемента?",
+            "options": ["width", "height", "size", "length"],
+            "correct": "b",
+            "explanation": "Высота элемента задаётся свойством height."
+        },
+        {
+            "question": "Какое свойство CSS задаёт стиль границы?",
+            "options": ["border", "border-style", "border-width", "border-color"],
+            "correct": "b",
+            "explanation": "Стиль границы задаётся свойством border-style."
+        },
+        {
+            "question": "Какое значение border-style создаёт пунктирную границу?",
+            "options": ["solid", "dashed", "dotted", "double"],
+            "correct": "c",
+            "explanation": "Значение dotted создаёт пунктирную границу."
+        },
+        {
+            "question": "Какое свойство CSS задаёт цвет границы?",
+            "options": ["border", "border-style", "border-width", "border-color"],
+            "correct": "d",
+            "explanation": "Цвет границы задаётся свойством border-color."
+        },
+        {
+            "question": "Какое свойство CSS задаёт толщину границы?",
+            "options": ["border", "border-style", "border-width", "border-color"],
+            "correct": "c",
+            "explanation": "Толщина границы задаётся свойством border-width."
+        },
+        {
+            "question": "Какое свойство CSS задаёт фоновое изображение?",
+            "options": ["background-color", "background-image", "background", "image"],
+            "correct": "b",
+            "explanation": "Фоновое изображение задаётся свойством background-image."
+        },
+        {
+            "question": "Какое значение background-size масштабирует изображение до покрытия элемента?",
+            "options": ["contain", "cover", "auto", "100%"],
+            "correct": "b",
+            "explanation": "Значение cover масштабирует фоновое изображение до полного покрытия элемента."
+        },
+        {
+            "question": "Какое свойство CSS задаёт межстрочный интервал?",
+            "options": ["line-height", "text-height", "spacing", "font-height"],
+            "correct": "a",
+            "explanation": "Межстрочный интервал задаётся свойством line-height."
+        },
+        {
+            "question": "Какое свойство CSS задаёт подчёркивание текста?",
+            "options": ["text-decoration", "font-decoration", "underline", "text-style"],
+            "correct": "a",
+            "explanation": "Подчёркивание текста задаётся свойством text-decoration."
+        },
+        {
+            "question": "Какое значение text-decoration убирает подчёркивание?",
+            "options": ["underline", "overline", "line-through", "none"],
+            "correct": "d",
+            "explanation": "Значение none для text-decoration убирает подчёркивание."
+        },
+        {
+            "question": "Какой CSS-селектор выберет все параграфы?",
+            "options": [".p", "#p", "p", "[p]"],
+            "correct": "c",
+            "explanation": "Селектор p выбирает все элементы &lt;p&gt;."
+        },
+        {
+            "question": "Какое свойство CSS задаёт прозрачность элемента?",
+            "options": ["opacity", "visibility", "transparent", "alpha"],
+            "correct": "a",
+            "explanation": "Прозрачность элемента задаётся свойством opacity."
+        },
+        {
+            "question": "Какое значение opacity делает элемент полностью прозрачным?",
+            "options": ["0", "1", "100", "none"],
+            "correct": "a",
+            "explanation": "Значение 0 для opacity делает элемент полностью прозрачным."
+        },
+        {
+            "question": "Какое свойство CSS задаёт тень для элемента?",
+            "options": ["shadow", "box-shadow", "text-shadow", "border-shadow"],
+            "correct": "b",
+            "explanation": "Тень для элемента задаётся свойством box-shadow."
+        },
+        {
+            "question": "Какое свойство CSS задаёт тень для текста?",
+            "options": ["shadow", "box-shadow", "text-shadow", "border-shadow"],
+            "correct": "c",
+            "explanation": "Тень для текста задаётся свойством text-shadow."
+        },
+        {
+            "question": "Какое свойство CSS задаёт выравнивание блока по центру?",
+            "options": ["text-align", "margin", "align", "center"],
+            "correct": "b",
+            "explanation": "Для центрирования блока используется margin: auto."
+        },
+        {
+            "question": "Какой CSS-селектор выберет первый элемент в списке?",
+            "options": [":first", ":first-child", ":first-of-type", ":first-element"],
+            "correct": "b",
+            "explanation": "Селектор :first-child выбирает первый дочерний элемент."
+        },
+        {
+            "question": "Какое свойство CSS задаёт стиль курсора?",
+            "options": ["cursor", "pointer", "mouse", "hover"],
+            "correct": "a",
+            "explanation": "Стиль курсора задаётся свойством cursor."
+        },
+        {
+            "question": "Какое значение cursor делает курсор указателем?",
+            "options": ["default", "pointer", "crosshair", "move"],
+            "correct": "b",
+            "explanation": "Значение pointer делает курсор указателем."
+        },
+        {
+            "question": "Какое свойство CSS задаёт отображение элемента?",
+            "options": ["display", "visibility", "show", "block"],
+            "correct": "a",
+            "explanation": "Отображение элемента задаётся свойством display."
+        },
+        {
+            "question": "Какое значение display делает элемент блочным?",
+            "options": ["inline", "block", "flex", "none"],
+            "correct": "b",
+            "explanation": "Значение block делает элемент блочным."
+        },
+        {
+            "question": "Какое значение display скрывает элемент?",
+            "options": ["inline", "block", "flex", "none"],
+            "correct": "d",
+            "explanation": "Значение none скрывает элемент."
+        },
+        {
+            "question": "Какое свойство CSS задаёт расстояние между буквами?",
+            "options": ["letter-spacing", "word-spacing", "text-spacing", "font-spacing"],
+            "correct": "a",
+            "explanation": "Расстояние между буквами задаётся свойством letter-spacing."
+        },
+        {
+            "question": "Какое свойство CSS задаёт расстояние между словами?",
+            "options": ["letter-spacing", "word-spacing", "text-spacing", "font-spacing"],
+            "correct": "b",
+            "explanation": "Расстояние между словами задаётся свойством word-spacing."
+        }
+    ]
+}

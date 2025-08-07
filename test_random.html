@@ -1,0 +1,206 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по HTML и CSS с рандомными вопросами</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            width: 100%;
+        }
+        h1 {
+            color: navy;
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: none;
+        }
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+        .incorrect {
+            color: red;
+            font-weight: bold;
+        }
+        #error {
+            color: red;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Тест по HTML и CSS</h1>
+        <div id="error">Ошибка загрузки вопросов. Проверьте файл questions.json.</div>
+        <div id="questions"></div>
+        <button onclick="checkAnswers()">Проверить ответы</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        let questionBank = [];
+
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        async function loadQuestions() {
+            try {
+                const response = await fetch('questions.json');
+                if (!response.ok) throw new Error('Не удалось загрузить questions.json');
+                const data = await response.json();
+                questionBank = data.questions;
+                
+                const htmlQuestions = questionBank.filter(q => q.explanation.includes('HTML'));
+                const cssQuestions = questionBank.filter(q => !q.explanation.includes('HTML'));
+                const selectedHtml = shuffle(htmlQuestions).slice(0, 12);
+                const selectedCss = shuffle(cssQuestions).slice(0, 8);
+                const selectedQuestions = shuffle([...selectedHtml, ...selectedCss]);
+
+                const questionsDiv = document.getElementById('questions');
+                selectedQuestions.forEach((q, index) => {
+                    const questionNum = index + 1;
+                    const questionHtml = `
+                        <div class="question">
+                            <p>${questionNum}. ${q.question}</p>
+                            <div class="options">
+                                <label><input type="radio" name="q${questionNum}" value="a">${q.options[0]}</label>
+                                <label><input type="radio" name="q${questionNum}" value="b">${q.options[1]}</label>
+                                <label><input type="radio" name="q${questionNum}" value="c">${q.options[2]}</label>
+                                <label><input type="radio" name="q${questionNum}" value="d">${q.options[3]}</label>
+                            </div>
+                        </div>`;
+                    questionsDiv.innerHTML += questionHtml;
+                });
+                document.getElementById('error').style.display = 'none';
+            } catch (error) {
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+
+        function checkAnswers() {
+            if (questionBank.length === 0) {
+                document.getElementById('error').style.display = 'block';
+                return;
+            }
+            const selectedQuestions = Array.from(document.querySelectorAll('.question')).map((_, index) => {
+                const q = questionBank.find(q => q.question === document.querySelector(`.question:nth-child(${index + 1}) p`).textContent);
+                return q;
+            });
+            let score = 0;
+            let resultText = '';
+
+            selectedQuestions.forEach((q, index) => {
+                const questionNum = index + 1;
+                const selected = document.querySelector(`input[name="q${questionNum}"]:checked`);
+                if (selected) {
+                    const userAnswer = selected.value;
+                    if (userAnswer === q.correct) {
+                        score++;
+                        resultText += `<p class="correct">${questionNum}. ${q.question} — Правильно!</p>`;
+                    } else {
+                        resultText += `<p class="incorrect">${questionNum}. ${q.question} — Неправильно. ${q.explanation}</p>`;
+                    }
+                } else {
+                    resultText += `<p class="incorrect">${questionNum}. ${q.question} — Ответ не выбран.</p>`;
+                }
+            });
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `<p>Ваш результат: ${score}/20</p>${resultText}`;
+            resultDiv.style.display = 'block';
+        }
+
+        window.onload = loadQuestions;
+    </script>
+</body>
+</html>
