@@ -354,7 +354,6 @@
             "correct": "b",
             "explanation": "Тег &lt;pre&gt; сохраняет форматирование текста, включая пробелы и переносы."
         },
-        // CSS Questions (40)
         {
             "question": "Какой CSS-селектор выберет элементы с классом \"intro\"?",
             "options": ["#intro", ".intro", "intro", "[class=\"intro\"]"],
