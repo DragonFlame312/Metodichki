@@ -1,7 +1,7 @@
 {
     "questions": [
         {
-            "question": "Что делает тег <!DOCTYPE html>?",
+            "question": "Что делает тег  &lt;DOCTYPE html&gt; ",
             "options": ["Задаёт кодировку страницы", "Указывает браузеру, что документ написан на HTML5", "Создаёт заголовок страницы", "Подключает CSS-стили"],
             "correct": "b",
             "explanation": "Тег &lt;!DOCTYPE html&gt; указывает, что документ написан на HTML5."
