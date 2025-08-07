@@ -42,7 +42,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тест по HTML и CSS с рандомными вопросами</title>
+    <title>Тест по HTML и CSS</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -133,13 +133,20 @@
             return array;
         }
 
+        // Нормализация текста для сравнения
+        function normalizeText(text) {
+            return text.trim().replace(/\s+/g, ' ').toLowerCase();
+        }
+
         async function loadQuestions() {
             try {
-                const response = await fetch('questions.json');
-                if (!response.ok) throw new Error('Не удалось загрузить questions.json');
+                const response = await fetch('questions.json?v=' + new Date().getTime());
+                if (!response.ok) throw new Error(`Не удалось загрузить questions.json: ${response.status}`);
                 const data = await response.json();
+                console.log('Загруженные данные:', data);
+                if (!data.questions) throw new Error('Неверная структура questions.json: отсутствует ключ "questions"');
                 questionBank = data.questions;
-                
+
                 const htmlQuestions = questionBank.filter(q => q.explanation.includes('HTML'));
                 const cssQuestions = questionBank.filter(q => !q.explanation.includes('HTML'));
                 const selectedHtml = shuffle(htmlQuestions).slice(0, 12);
@@ -147,6 +154,7 @@
                 const selectedQuestions = shuffle([...selectedHtml, ...selectedCss]);
 
                 const questionsDiv = document.getElementById('questions');
+                questionsDiv.innerHTML = '';
                 selectedQuestions.forEach((q, index) => {
                     const questionNum = index + 1;
                     const questionHtml = `
@@ -163,6 +171,7 @@
                 });
                 document.getElementById('error').style.display = 'none';
             } catch (error) {
+                console.error('Ошибка загрузки вопросов:', error);
                 document.getElementById('error').style.display = 'block';
             }
         }
@@ -170,17 +179,30 @@
         function checkAnswers() {
             if (questionBank.length === 0) {
                 document.getElementById('error').style.display = 'block';
+                console.error('questionBank пустой');
                 return;
             }
+
             const selectedQuestions = Array.from(document.querySelectorAll('.question')).map((_, index) => {
-                const q = questionBank.find(q => q.question === document.querySelector(`.question:nth-child(${index + 1}) p`).textContent);
-                return q;
+                const questionText = document.querySelector(`.question:nth-child(${index + 1}) p`).textContent.replace(/^\d+\.\s/, '');
+                const normalizedQuestionText = normalizeText(questionText);
+                console.log('Ищем вопрос:', normalizedQuestionText); // Отладка
+                const foundQuestion = questionBank.find(q => normalizeText(q.question) === normalizedQuestionText);
+                if (!foundQuestion) {
+                    console.error('Вопрос не найден в questionBank:', normalizedQuestionText);
+                }
+                return foundQuestion;
             });
+
             let score = 0;
             let resultText = '';
 
             selectedQuestions.forEach((q, index) => {
                 const questionNum = index + 1;
+                if (!q) {
+                    resultText += `<p class="incorrect">${questionNum}. Вопрос не найден в базе данных.</p>`;
+                    return;
+                }
                 const selected = document.querySelector(`input[name="q${questionNum}"]:checked`);
                 if (selected) {
                     const userAnswer = selected.value;
