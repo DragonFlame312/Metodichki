@@ -48,7 +48,8 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 20px;
+            padding: 50px;
+            padding-top: 5vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -150,7 +151,7 @@
                 const htmlQuestions = questionBank.filter(q => q.explanation.includes('HTML'));
                 const cssQuestions = questionBank.filter(q => !q.explanation.includes('HTML'));
                 const selectedHtml = shuffle(htmlQuestions).slice(0, 12);
-                const selectedCss = shuffle(cssQuestions).slice(0, 8);
+                const selectedCss = shuffle(cssQuestions).slice(0, 17);
                 const selectedQuestions = shuffle([...selectedHtml, ...selectedCss]);
 
                 const questionsDiv = document.getElementById('questions');
